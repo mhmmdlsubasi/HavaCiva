@@ -1,0 +1,99 @@
+baseURL: "https://mhmmdlsubasi.github.io/havaciva/"
+languageCode: "tr"
+title: "HavaCiva"
+theme: "PaperMod"
+
+params:
+  displayFullLangName: true
+  ShowWordCount: true
+  ShowFullTextinRSS: true
+  ShowBreadCrumbs: true
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  defaultTheme: auto
+  comments: true
+  ShowToc: true
+  TocOpen: true
+  ShowRssButtonInSectionTermList: true
+
+  label:
+    text: "HavaCiva"
+    icon: 
+
+  assets:
+    favicon: 
+    disableFingerprinting: 
+    theme_color: 
+    msapplication_TileColor:
+
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys:
+      - "title"
+      - "permalink"
+      - "summary"
+      - "content"
+
+  homeInfoParams:
+    Title: "Meteoroloji hepimizin amiridir."
+    # Content: "Content"
+
+
+  # socialIcons:
+  #   facebook:
+  #     name: "facebook"
+  #     url: "https://www.facebook.com/mhmmdlsubasi"
+
+  cover:
+    linkFullImages: true
+    responsiveImages: false
+    hidden:
+    hiddenInList:
+    hiddenInSingle:
+
+  schema:
+    publisherType:
+    sameAs: 
+
+menu:
+  main:
+    - identifier: "search"
+      name: "Arama"
+      url: "/search/"
+      weight: 10
+
+    - identifier: "categories"
+      name: "Kategoriler"
+      url: "/categories/"
+      weight: 20
+
+    - identifier: "tags"
+      name: "Etiketler"
+      url: "/tags/"
+      weight: 30
+
+    - identifier: "archives"
+      name: "Arşiv"
+      url: "/archives/"
+      weight: 40
+
+    - identifier: "about"
+      name: "Hakkımızda"
+      url: "/about/"
+      weight: 50
+    
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
