@@ -2,7 +2,8 @@ baseURL: "https://mhmmdlsubasi.github.io/havaciva/"
 languageCode: "tr"
 title: "HavaCiva"
 theme: "PaperMod"
-
+defaultContentLanguage: "tr"
+# disableLanguages: ["en"]
 params:
   # languageAltTitle: "Turkish"
   displayFullLangName: true

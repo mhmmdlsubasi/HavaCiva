@@ -5,22 +5,19 @@ hidemeta: true
 ---
 # HavaCiva Hakkında
 
-HavaCiva, meteoroloji alanında bilgi paylaşımını teşvik etmek ve meteorolojiye ilgi duyan herkes için bir platform sağlamak amacıyla kurulmuştur. Projenin temel amacı, meteoroloji bilgisini yaygınlaştırmak ve topluluğun bilgi ve deneyimlerini paylaşmalarını sağlamaktır.
+**HavaCiva**, meteoroloji alanında bilgi paylaşımını teşvik etmek ve meteorolojiye ilgi duyan herkes için bir platform sağlamak amacıyla kurulmuştur. Projenin temel amacı, meteoroloji bilgisini yaygınlaştırmak ve topluluğun bilgi ve deneyimlerini paylaşmalarını sağlamaktır.
 
 ## Misyonumuz
 
-HavaCiva'nın misyonu, meteoroloji bilgisine erişimi artırmak ve bu alanda bilgi paylaşımını teşvik etmektir. Amacımız, hava durumu ve iklim bilimlerine ilgi duyan herkesin bu alandaki gelişmeleri takip edebileceği ve katkıda bulunabileceği bir platform sağlamaktır.
+**HavaCiva'nın misyonu**, meteoroloji bilgisine erişimi artırmak ve bu alanda bilgi paylaşımını teşvik etmektir. Amacımız, hava durumu ve iklim bilimlerine ilgi duyan herkesin bu alandaki gelişmeleri takip edebileceği ve katkıda bulunabileceği bir platform sağlamaktır.
 
 ## Ekibimiz
 
 HavaCiva, Samsun Üniversitesi Meteoroloji Mühendisliği mezunu üç arkadaş tarafından yönetilmektedir:
 
-- **Muhammed Ali Subaşı**: Yazılım alanında uzmanlaşmış ve projenin teknik altyapısını geliştiren lider üye.
-	- Sosyal Medya: [WhatsApp](https://wa.me/905510649268) [Telegram](https://t.me/mhmmdlsubasi) [Facebook](https://www.facebook.com/mhmmdlsubasi) [Instagram](https://www.instagram.com/mhmmdlsubasi) [Twitter](https://twitter.com/mhmmdlsubasi) [LinkedIn](https://www.linkedin.com/in/mhmmdlsubasi) [GitHub](https://github.com/mhmmdlsubasi) 
+- [**Muhammed Ali Subaşı**](https://mhmmdlsubasi.github.io/MAS/): Yazılım alanında uzmanlaşmış ve projenin teknik altyapısını geliştiren lider üye.
 - **Muhammed Başpınar**: Küçük yaşta meteoroloji bilimine gönül vermiş bir meteoroloji mühendisi.
-	- Sosyal Medya: [WhatsApp](https://wa.me/905510649268) [Telegram](https://t.me/mhmmdlsubasi) [Facebook](https://www.facebook.com/mhmmdlsubasi) [Instagram](https://www.instagram.com/mhmmdlsubasi) [Twitter](https://twitter.com/mhmmdlsubasi) [LinkedIn](https://www.linkedin.com/in/mhmmdlsubasi) [GitHub](https://github.com/mhmmdlsubasi)
 - **Ali Çalışkan**: Meteoroloji bilimine olan tutkusuyla bilinen araştırmacı bir mühendis.
-	- Sosyal Medya: [WhatsApp](https://wa.me/905510649268) [Telegram](https://t.me/mhmmdlsubasi) [Facebook](https://www.facebook.com/mhmmdlsubasi) [Instagram](https://www.instagram.com/mhmmdlsubasi) [Twitter](https://twitter.com/mhmmdlsubasi) [LinkedIn](https://www.linkedin.com/in/mhmmdlsubasi) [GitHub](https://github.com/mhmmdlsubasi)
 
 ## İçeriklerimiz
 
@@ -32,13 +29,19 @@ HavaCiva'da çeşitli içerik türlerine yer verilmektedir:
 - **Doğru Bilinen Yanlışlar**: Meteoroloji ile ilgili yaygın yanlış anlamaları düzeltmek için bilgilendirici içerikler.
 - **Rehberler ve İpuçları**: Meteoroloji ile ilgili temel kavramlar, ekipmanlar ve uygulamalar hakkında rehberler.
 
+## Katkıda Bulunma 
+
+HavaCiva'da paylaşımda bulunmak isteyen herkesin katkılarını memnuniyetle karşılıyoruz. Meteoroloji ile ilgili fikirlerinizi, bilgi birikiminizi, makalelerinizi veya araştırmalarınızı paylaşmak isterseniz, lütfen aşağıdaki e-posta adresine gerekli dosyaları gönderin: 
+
+- **Katkı E-posta Adresi**: [contribute@havaciva.com](mailto:contribute@havaciva.com) 
+
+Gönderilerinizin değerlendirilmesi ve yayınlanması için dosyalarınızın yanında kısa bir açıklama ve iletişim bilgilerinizi de eklemeyi unutmayın. Dosyalarınızı ve metinlerinizi düzenli ve anlaşılır bir formatta gönderdiğinizden emin olun.
+
 ## İletişim
 
 HavaCiva ile ilgili herhangi bir soru, öneri veya geri bildiriminiz varsa, bize ulaşmaktan çekinmeyin:
 
-- **E-posta**: [havaciva@protonmail.com](mailto:havaciva@protonmail.com)
+- **E-posta**: [info@havaciva.com](mailto:info@havaciva.com)
 - **Sosyal Medya**: [@HavaCiva](https://twitter.com/HavaCiva)
 
 Bilgi paylaştıkça çoğalır, ve HavaCiva olarak amacımız bu bilgiyi en geniş kitlelere ulaştırmaktır.
-
-
