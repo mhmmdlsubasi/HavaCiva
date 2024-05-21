@@ -4,6 +4,7 @@ title: "HavaCiva"
 theme: "PaperMod"
 
 params:
+  # languageAltTitle: "Turkish"
   displayFullLangName: true
   ShowWordCount: true
   ShowFullTextinRSS: true

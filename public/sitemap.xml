@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/</loc>
+    <loc>http://localhost:1313/havaciva/</loc>
     <lastmod>2024-04-19T11:30:04+03:00</lastmod>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/posts/</loc>
+    <loc>http://localhost:1313/havaciva/posts/</loc>
     <lastmod>2024-04-19T11:30:04+03:00</lastmod>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/search/</loc>
+    <loc>http://localhost:1313/havaciva/search/</loc>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/archives/</loc>
+    <loc>http://localhost:1313/havaciva/archives/</loc>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/tags/</loc>
+    <loc>http://localhost:1313/havaciva/tags/</loc>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/about/</loc>
+    <loc>http://localhost:1313/havaciva/about/</loc>
   </url><url>
-    <loc>https://mhmmdlsubasi.github.io/havaciva/categories/</loc>
+    <loc>http://localhost:1313/havaciva/categories/</loc>
   </url>
 </urlset>
