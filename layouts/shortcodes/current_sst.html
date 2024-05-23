@@ -1,0 +1,68 @@
+<figure{{ if or (.Get "class") (eq (.Get "align") "center") }} class="
+           {{- if eq (.Get "align") "center" }}align-center {{ end }}
+           {{- with .Get "class" }}{{ . }}{{- end }}"
+{{- end -}}>
+    <img id="sstImage" loading="lazy" src="" 
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+         {{- with .Get "title" }}title="{{ . }}"{{ end -}}
+         data-target="{{ .Get "target" }}"
+         data-rel="{{ .Get "rel" }}"
+    /> <!-- Closing img tag -->
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                {{ . }}
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+</figure>
+
+<script>
+    // Günün tarihini almak için bir Date nesnesi oluşturuyoruz
+    var today = new Date();
+    
+    // Tarih formatını YYYY-MM-DD şeklinde oluşturuyoruz
+    var dateString = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
+    
+    // src değerini güncel tarihle birleştirerek resmin yolunu oluşturuyoruz
+    var imagePath = '' + dateString + '.png';
+    
+    // Resmin src özelliğini güncel tarihle oluşturduğumuz yola ayarlıyoruz
+    var imageElement = document.getElementById('sstImage');
+    imageElement.src = imagePath;
+    
+    // Alt metni ve başlık özelliğini de güncel tarihe göre ayarlıyoruz
+    imageElement.alt = imagePath;
+    
+    // Eğer title değeri "default" ise, scriptten dönen imagePath değerini kullanıyoruz
+    if (imageElement.title === "default") {
+        imageElement.title = imagePath;
+    }
+    
+    // imagePath değerini kullanarak bir bağlantı oluşturuyoruz
+    var imageLink = document.createElement('a');
+    imageLink.href = imagePath;
+    
+    // Mevcut target ve rel değerlerini koruyoruz
+    if (imageElement.dataset.target) {
+        imageLink.target = imageElement.dataset.target;
+    }
+    if (imageElement.dataset.rel) {
+        imageLink.rel = imageElement.dataset.rel;
+    }
+
+    imageLink.appendChild(imageElement.cloneNode(true)); // Resim elementini kopyalayarak bağlantıya ekliyoruz
+    
+    // Resmin orijinal yerine bağlantıyı yerleştiriyoruz
+    imageElement.parentNode.replaceChild(imageLink, imageElement);
+</script>

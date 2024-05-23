@@ -1,0 +1,84 @@
+{{/* layouts/shortcodes/search.html */}}
+{{ $title := .Get "title" | default "Arama" }}
+{{ $dir := .Get "dir" | default "/" }}
+
+<header class="page-header">
+    <h1>{{- (printf "%s&nbsp;" $title) | htmlUnescape -}}
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </h1>
+</header>
+
+{{ $placeholder := .Get "placeholder" | default (printf "%s ↵" $.Page.Title) }}
+<div id="searchbox">
+    <input id="searchInput" autofocus placeholder="{{ $placeholder }}"
+        aria-label="search" type="search" autocomplete="off" maxlength="64">
+    <ul id="searchResults" aria-label="search results"></ul>
+</div>
+
+{{/* JavaScript kodu */}}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+        const allFiles = document.querySelectorAll("#searchFiles a");
+
+        // Tüm dosyaları listele
+        allFiles.forEach(link => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = link.href;
+            a.textContent = link.textContent;
+            li.appendChild(a);
+            searchResults.appendChild(li);
+        });
+
+        searchInput.addEventListener("input", function() {
+            const searchText = searchInput.value.toLowerCase();
+            searchResults.innerHTML = ""; // Temizleme
+
+            if (searchText.length === 0) {
+                // Arama girdisi boşken tüm dosyaları listele
+                allFiles.forEach(link => {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.href = link.href;
+                    a.textContent = link.textContent;
+                    li.appendChild(a);
+                    searchResults.appendChild(li);
+                });
+                return;
+            }
+
+            const searchItems = document.querySelectorAll("#searchResults li");
+            searchItems.forEach(item => {
+                item.parentNode.removeChild(item);
+            });
+
+            const searchResultsContainer = document.getElementById("searchResults");
+
+            allFiles.forEach(link => {
+                const fileName = link.textContent.toLowerCase();
+                if (fileName.includes(searchText)) {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.href = link.href;
+                    a.textContent = link.textContent;
+                    li.appendChild(a);
+                    searchResultsContainer.appendChild(li);
+                }
+            });
+        });
+    });
+</script>
+
+{{/* Dosya listesini oluşturma */}}
+{{ $files := readDir $dir }}
+<ul id="searchFiles" style="display: none;"> <!-- Dosya listesi için gizli bir liste oluştur -->
+    {{ range $files }}
+        <li><a href="{{ .Name }}">{{ .Name }}</a></li>
+    {{ end }}
+</ul>

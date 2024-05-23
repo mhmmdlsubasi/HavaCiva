@@ -1,0 +1,14 @@
+{{/* layouts/shortcodes/live_image.html */}}
+<img id="liveImage" src="https://mgm.gov.tr/FTPDATA/uzal/radar/comp/compppi15.jpg" alt="Canlı Görüntü">
+
+<script>
+    // Görüntüyü güncelleme fonksiyonu
+    function updateImage() {
+        var liveImage = document.getElementById("liveImage");
+        var imageUrl = "https://mgm.gov.tr/FTPDATA/uzal/radar/comp/compppi15.jpg?" + new Date().getTime(); // Güncel zamanı kullanarak resim URL'sini güncelle
+        liveImage.src = imageUrl;
+    }
+
+    // Belirli aralıklarla görüntüyü güncelle
+    setInterval(updateImage, 5000); // Örneğin, her 5 saniyede bir güncelle
+</script>

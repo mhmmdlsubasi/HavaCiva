@@ -4,6 +4,7 @@ title: "HavaCiva"
 theme: "PaperMod"
 defaultContentLanguage: "tr"
 # disableLanguages: ["en"]
+
 params:
   # languageAltTitle: "Turkish"
   displayFullLangName: true
@@ -57,7 +58,7 @@ params:
 
   cover:
     linkFullImages: true
-    responsiveImages: false
+    responsiveImages: 
     hidden:
     hiddenInList:
     hiddenInSingle:
