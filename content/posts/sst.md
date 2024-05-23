@@ -1,6 +1,6 @@
 ---
 title: "Günün SST Haritası"
-draft: false
+draft: true
 weight: 2
 showToc: false
 description: 
