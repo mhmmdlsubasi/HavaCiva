@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://havaciva.netlify.app/"
 languageCode: "tr"
 title: "HavaCiva"
 theme: "PaperMod"
