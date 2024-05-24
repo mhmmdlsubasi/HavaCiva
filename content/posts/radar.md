@@ -1,10 +1,13 @@
 ---
-title: Son Durumlar
 draft: false
-weight: 1
 showToc: false
-date: 2024-05-25T01:55:00.000Z
+title: Son Durumlar
+date: 2024-05-24T23:18:00.000Z
+weight: 1
 description: Meteorolojik son durum bilgilerinin paylaşıldığı sayfa
+image: blacksea.png
+tags:
+  - test
 ---
 ## Güncel Radar Görüntüsü (Birleştirilmiş)
 
