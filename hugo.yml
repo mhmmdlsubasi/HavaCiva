@@ -1,12 +1,10 @@
-baseURL: "https://havaciva.netlify.app/"
+baseURL: "/"
 languageCode: "tr"
 title: "HavaCiva"
 theme: "PaperMod"
 defaultContentLanguage: "tr"
-# disableLanguages: ["en"]
 
 params:
-  # languageAltTitle: "Turkish"
   displayFullLangName: true
   ShowWordCount: true
   ShowFullTextinRSS: true
