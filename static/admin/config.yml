@@ -22,3 +22,44 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Öne Çıkan Görsel", name: "image", widget: "image", required: false }
       - { label: "Etiketler", name: "tags", widget: "list", summary: "{{fields.tag}}", field: { label: "Tag", name: "tag", widget: "string" }} # https://github.com/decaporg/decap-cms/issues/4646 
       - { label: "Gövde", name: "body", widget: "markdown", hint: "Make sure to name added image as thumbnail" }
+  
+  - name: "pages"
+      label: "Pages"
+      files:
+        - file: "content/_index.md"
+          label: "Home Page"
+          name: "home"
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Subtitle, name: subtitle, widget: string}
+            - {label: Image, name: image, widget: image}
+            - {label: "Blurb", name: blurb, widget: object, fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
+            - {label: "Intro", name: intro, widget: object, fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
+            - {label: "Products", name: products, widget: list, fields: [
+                {label: "Image", name: "image", widget: "image"},
+                {label: "Text", name: "text", widget: "text"}]}
+            - {label: "Values", name: "values", widget: "object", fields: [
+                {label: "Heading", name: "heading", widget: string},
+                {label: "Text", name: "text", widget: "text"}]}
+              
+        - file: "content/contact/_index.md"
+          label: "Contact Page"
+          name: "contact"
+          fields:
+            - {label: Title, name: title, widget: string}
+            - {label: Logo, name: logo, widget: image}
+            - {label: Body, name: body, widget: markdown}
+            - label: Contact Entries
+              name: contact_entries
+              widget: list
+              fields:
+                - label: Heading
+                  name: heading
+                  widget: string
+                - label: Text
+                  name: text
+                  widget: text
