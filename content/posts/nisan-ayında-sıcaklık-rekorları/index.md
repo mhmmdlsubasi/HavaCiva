@@ -7,5 +7,6 @@ description: >-
 
 
   MGM illere ait istatistiki verileri incelediğimizde; 15 il merkezi, nisan ayı en yüksek sıcaklık rekorunu egale etti.
+image: 1000116727.jpg
 ---
 İşte rekor kıran o iller:
