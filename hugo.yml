@@ -18,7 +18,7 @@ params:
   ShowToc: true
   TocOpen: true
   ShowRssButtonInSectionTermList: true
-  googleAnalytics: "G-32FZM00F7C"
+  # googleAnalytics: "G-32FZM00F7C"
 
   label:
     text: "HavaCiva"
