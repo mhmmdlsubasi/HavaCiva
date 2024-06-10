@@ -28,41 +28,67 @@
 </figure>
 
 <script>
-    // Günün tarihini almak için bir Date nesnesi oluşturuyoruz
+    // Günün tarihini ve saatini almak için bir Date nesnesi oluşturuyoruz
     var today = new Date();
-    
-    // Tarih formatını YYYY-MM-DD şeklinde oluşturuyoruz
-    var dateString = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
-    
-    // src değerini güncel tarihle birleştirerek resmin yolunu oluşturuyoruz
-    var imagePath = '' + dateString + '.png';
-    
-    // Resmin src özelliğini güncel tarihle oluşturduğumuz yola ayarlıyoruz
-    var imageElement = document.getElementById('sstImage');
-    imageElement.src = imagePath;
-    
-    // Alt metni ve başlık özelliğini de güncel tarihe göre ayarlıyoruz
-    imageElement.alt = imagePath;
-    
-    // Eğer title değeri "default" ise, scriptten dönen imagePath değerini kullanıyoruz
-    if (imageElement.title === "default") {
-        imageElement.title = imagePath;
-    }
-    
-    // imagePath değerini kullanarak bir bağlantı oluşturuyoruz
-    var imageLink = document.createElement('a');
-    imageLink.href = imagePath;
-    
-    // Mevcut target ve rel değerlerini koruyoruz
-    if (imageElement.dataset.target) {
-        imageLink.target = imageElement.dataset.target;
-    }
-    if (imageElement.dataset.rel) {
-        imageLink.rel = imageElement.dataset.rel;
+    var hour = today.getHours();
+    var minute = today.getMinutes();
+
+    // Saat 21:37'den önce mi kontrol ediyoruz
+    if (hour < 21 || (hour === 21 && minute < 37)) {
+        // Tarih formatını YYYY-MM-DD şeklinde oluşturuyoruz
+        var prevDay = new Date(today);
+        prevDay.setDate(today.getDate() - 1); // Bir önceki günü alıyoruz
+        var dateString = prevDay.getFullYear() + '-' + ('0' + (prevDay.getMonth() + 1)).slice(-2) + '-' + ('0' + prevDay.getDate()).slice(-2);
+    } else {
+        // Tarih formatını YYYY-MM-DD şeklinde oluşturuyoruz
+        var dateString = today.getFullYear() + '-' + ('0' + (today.getMonth() + 1)).slice(-2) + '-' + ('0' + today.getDate()).slice(-2);
     }
 
-    imageLink.appendChild(imageElement.cloneNode(true)); // Resim elementini kopyalayarak bağlantıya ekliyoruz
-    
-    // Resmin orijinal yerine bağlantıyı yerleştiriyoruz
-    imageElement.parentNode.replaceChild(imageLink, imageElement);
+    // Resmin yolunu oluşturuyoruz
+    var imagePath = '' + dateString + '.png';
+
+    // Dosyanın var olup olmadığını kontrol ediyoruz
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', imagePath);
+    xhr.onload = function() {
+        var imageExists = (xhr.status === 200);
+
+        // Hata.png dosyasına yönlendirme
+        if (!imageExists) {
+            imagePath = '/not-found.png';
+        }
+
+        // Resmin src özelliğini güncel tarihle oluşturduğumuz yola ayarlıyoruz
+        var imageElement = document.getElementById('sstImage');
+        imageElement.src = imagePath;
+
+        // Alt metni ve başlık özelliğini de güncel tarihe göre ayarlıyoruz
+        imageElement.alt = imagePath;
+
+        // Eğer title değeri "default" ise, scriptten dönen imagePath değerini kullanıyoruz
+        if (imageElement.title === "default") {
+            imageElement.title = imagePath;
+        }
+
+        // imagePath değerini kullanarak bir bağlantı oluşturuyoruz
+        var imageLink = document.createElement('a');
+        imageLink.href = imagePath;
+
+        // Mevcut target ve rel değerlerini koruyoruz
+        if (imageElement.dataset.target) {
+            imageLink.target = imageElement.dataset.target;
+        }
+        if (imageElement.dataset.rel) {
+            imageLink.rel = imageElement.dataset.rel;
+        }
+
+        imageLink.appendChild(imageElement.cloneNode(true)); // Resim elementini kopyalayarak bağlantıya ekliyoruz
+
+        // Resmin orijinal yerine bağlantıyı yerleştiriyoruz
+        imageElement.parentNode.replaceChild(imageLink, imageElement);
+    };
+    xhr.onerror = function() {
+        console.error('Dosya kontrolünde hata:', xhr.statusText);
+    };
+    xhr.send();
 </script>
