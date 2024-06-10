@@ -19,11 +19,14 @@ params:
   TocOpen: true
   ShowRssButtonInSectionTermList: true
   # googleAnalytics: "G-32FZM00F7C"
-
   label:
     text: "HavaCiva"
     icon: 
 
+  analytics:
+    google:
+      SiteVerificationTag: "G-32FZM00F7C"
+      
   assets:
     favicon: 
     disableFingerprinting: 
