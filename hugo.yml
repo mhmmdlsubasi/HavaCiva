@@ -20,7 +20,6 @@ params:
   ShowRssButtonInSectionTermList: true
   googleAnalytics: "G-32FZM00F7C"
 
-  customCSS: ["css/custom.css"]
   label:
     text: "HavaCiva"
     icon: 
